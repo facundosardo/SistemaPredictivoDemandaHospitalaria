@@ -1,6 +1,6 @@
 # Modelo Predictivo de Deterioro de Salud en Pacientes Hospitalizados  
 
-**Grupo n°76 – Vertical Data Science (HealthTech)**  
+**Grupo N°76 – Vertical Data Science (HealthTech)**  
 **Proyecto desarrollado en No Country**  
 **Demostración del proyecto: https://www.youtube.com/watch?v=6jqe4DEqTF8**
 
@@ -82,17 +82,6 @@ El dataset contiene información sobre:
 
 Devuelve la proyección para un hospital y mes determinados.
 
-Ejemplo de solicitud:
-
-<img width="704" height="615" alt="image" src="https://github.com/user-attachments/assets/accf1990-f17c-4b26-85cd-5269e4d26ae3" />
-
-
-
-Ejemplo de respuesta:
-
-<img width="715" height="729" alt="image" src="https://github.com/user-attachments/assets/e7856c59-db4d-4412-a452-9dfccfb9e3db" />
-
-
 ## Dashboard Power BI
 
 El dashboard interactivo muestra la evolución proyectada y el estado actual del sistema hospitalario.
@@ -109,8 +98,9 @@ Detalle por hospital: nivel de alerta, recomendaciones y confianza del modelo.
 ## Equipo de Desarrollo
 
 Grupo n°76 – Vertical Data Science / HealthTech
-- Facundo Sardo
 - Ramón Ramírez
 - Gastón Peló
 - Belén Urbaneja
 - Lourdes Núñez
+- Facundo Ariel Sardo
+
