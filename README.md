@@ -1,60 +1,61 @@
-# Modelo Predictivo de Deterioro de Salud en Pacientes Hospitalizados  
+# 🏥 Modelo Predictivo de Deterioro de Salud en Pacientes Hospitalizados  
 
-**Grupo N°76 – Vertical Data Science (HealthTech)**  
-**Proyecto desarrollado en No Country**  
-**Demostración del proyecto: https://www.youtube.com/watch?v=6jqe4DEqTF8**
+**Equipo Nº76 – Vertical Data Science (HealthTech)**  
+Proyecto desarrollado en **No Country**  
+🎥 **Demo:** [YouTube – Presentación del proyecto](https://www.youtube.com/watch?v=6jqe4DEqTF8)
 
 ---
 
-## Descripción General
+## 🧠 Descripción General  
 
-Este proyecto tiene como propósito **anticipar la demanda hospitalaria** en los establecimientos de salud de la Provincia de Buenos Aires mediante técnicas de *machine learning*.  
-A partir del análisis de datos históricos, el sistema **predice la evolución mensual** de:
+Este proyecto tiene como objetivo **anticipar la demanda hospitalaria** en los establecimientos de salud de la Provincia de Buenos Aires mediante técnicas de *machine learning*.  
 
+A partir del análisis de datos históricos (2005–2023), el sistema **predice la evolución mensual** de:  
 - Consultas médicas  
 - Cirugías  
 - Urgencias  
 - Porcentaje de ocupación hospitalaria  
 
-El modelo busca **mejorar la planificación y gestión hospitalaria**, ayudando a anticipar picos de demanda, optimizar la disponibilidad de camas y personal, y prevenir situaciones de saturación.
+El modelo busca **mejorar la planificación y gestión hospitalaria**, ayudando a anticipar picos de demanda, optimizar la disponibilidad de camas y personal, y prevenir situaciones de saturación.  
 
 ---
 
-## Objetivos del Proyecto
+## 🎯 Objetivos del Proyecto  
 
-- Analizar tendencias históricas (2005–2023) de rendimiento hospitalario.  
-- Entrenar modelos predictivos basados en *machine learning* (Prophet, XGBoost).  
-- Desarrollar una **API REST** para exponer las predicciones de manera dinámica.  
-- Conectar la API a un **dashboard interactivo en Power BI** que muestre la evolución de la demanda entre 2023 y 2026.  
+- Analizar tendencias históricas del rendimiento hospitalario.  
+- Entrenar modelos predictivos basados en *machine learning* (**XGBoost**, **Prophet**).  
+- Desarrollar una **API REST** para exponer las predicciones dinámicamente.  
+- Conectar la API con un **dashboard interactivo en Power BI** que visualiza la demanda proyectada (2023–2026).  
 
 ---
 
-## Arquitectura del Sistema
+## ⚙️ Arquitectura del Sistema  
 
+1. **Dataset original:** Ministerio de Salud de la Provincia de Buenos Aires.  
+2. **Procesamiento y limpieza:** Python (Pandas / NumPy).  
+3. **Entrenamiento de modelos:** XGBoost.  
+4. **Proyecciones mensuales:** 2024–2026.  
+5. **API Flask:** expone resultados en formato JSON.  
+6. **Dashboard Power BI:** visualización interactiva y actualizable.  
 
-- Dataset original (Ministerio de Salud PBA)
-- Procesamiento y limpieza de datos (Python / Pandas)
-- Entrenamiento de modelos (XGBoost)
-- Generación de proyecciones mensuales (2024–2026)
-- API Flask para servir las predicciones en formato JSON
-- Dashboard en Power BI (visualización interactiva)
+---
 
+## 🗂️ Fuente de Datos  
 
-## Fuente de Datos
+Datos públicos del **Ministerio de Salud de la Provincia de Buenos Aires**, disponibles en el portal de datos abiertos:  
+🔗 [Rendimientos de Establecimientos de Salud](https://catalogo.datos.gba.gob.ar/dataset/rendimientos-establecimientos-salud/archivo/8c3130cb-61ad-4014-b829-503b214ba3c0)
 
-Datos públicos del Ministerio de Salud de la Provincia de Buenos Aires, disponibles en el portal de datos abiertos:
-🔗 Rendimientos de Establecimientos de Salud
+El dataset contiene información sobre:  
+- Ocupación de camas  
+- Consultas médicas  
+- Cirugías  
+- Urgencias  
+- Personal y servicios  
+- Variables temporales  
 
-El dataset contiene información sobre:
+---
 
-- Ocupación de camas
-- Consultas médicas
-- Cirugías
-- Urgencias
-- Personal y servicios
-- Variables temporales
-
-## Tecnologías Utilizadas
+## 🧩 Tecnologías Utilizadas  
 
 | Componente              | Tecnología       |
 | ----------------------- | ---------------- |
@@ -65,42 +66,43 @@ El dataset contiene información sobre:
 | Visualización           | Power BI         |
 | Almacenamiento temporal | CSV / JSON       |
 
+---
 
-## Modelos Implementados
+## 📈 Modelos Implementados  
 
 | Variable          | Modelo            | R²   | Descripción                           |
 | ----------------- | ----------------- | ---- | ------------------------------------- |
-| Consultas médicas | XGBoost Regressor | 0.96 | Precisión alta en patrones temporales |
+| Consultas médicas | XGBoost Regressor | 0.96 | Alta precisión en patrones temporales |
 | Cirugías          | XGBoost (log)     | 0.94 | Estacionalidad controlada             |
-| Urgencias         | XGBoost           | 0.93 | Alta estabilidad ante variabilidad    |
+| Urgencias         | XGBoost           | 0.93 | Buena estabilidad ante variabilidad   |
 | Ocupación (%)     | XGBoost           | 0.90 | Ajuste robusto ante valores extremos  |
 
+---
 
-## API REST
+## 🔗 API REST  
 
-/predictorio → POST
+**Endpoint principal:** `/predictorio` *(POST)*  
+Devuelve la **proyección esperada** para un hospital y mes determinados en formato JSON.  
 
-Devuelve la proyección para un hospital y mes determinados.
+---
 
-## Dashboard Power BI
+## 📊 Dashboard Power BI  
 
-El dashboard interactivo muestra la evolución proyectada y el estado actual del sistema hospitalario.
-Conecta directamente a la API Flask y actualiza automáticamente las predicciones.
+El dashboard interactivo muestra la **evolución proyectada** y el **estado actual del sistema hospitalario**.  
+Se conecta directamente a la API Flask, actualizando las predicciones automáticamente.  
 
-Páginas principales:
+**Secciones principales:**  
+- **Visión general:** KPIs de consultas, cirugías, urgencias y ocupación.  
+- **Evolución temporal:** análisis de tendencias y estacionalidad (2024–2026).  
+- **Detalle por hospital:** nivel de alerta, recomendaciones y confianza del modelo.  
 
-Visión general: KPIs de consultas, cirugías, urgencias y ocupación.
+---
 
-Evolución temporal: análisis de tendencias y estacionalidad (2024–2026).
+## 👥 Equipo de Desarrollo  
 
-Detalle por hospital: nivel de alerta, recomendaciones y confianza del modelo.
-
-## Equipo de Desarrollo
-
-Grupo n°76 – Vertical Data Science / HealthTech
-- Ramón Ramírez
-- Gastón Peló
-- Belén Urbaneja
-- Lourdes Núñez
-- Facundo Ariel Sardo
-
+**Equipo Nº76 – Vertical Data Science / HealthTech**  
+- Ramón Ramírez  
+- Gastón Peló  
+- Belén Urbaneja  
+- Lourdes Núñez  
+- Facundo Ariel Sardo  
