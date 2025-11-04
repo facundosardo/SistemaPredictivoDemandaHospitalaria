@@ -1,0 +1,26 @@
+{
+  "consultas_medicas": {
+    "MAE": 581.46484375,
+    "RMSE": 1553.2863547974662,
+    "R2": 0.962586522102356,
+    "path": "models/xgb_consultas_Vurg.pkl"
+  },
+  "porcentaje_ocupacion": {
+    "MAE": 0.2882672650890284,
+    "RMSE": 0.7228346566953813,
+    "R2": 0.9038200955745794,
+    "path": "models/xgb_ocupacion_Vurg.pkl"
+  },
+  "cirugias_log": {
+    "MAE": 0.16943327271747552,
+    "RMSE": 0.36690626810378657,
+    "R2": 0.9477883444788113,
+    "path": "models/xgb_cirugias_Vurg.pkl"
+  },
+  "urgencias": {
+    "MAE": 107.13247680664062,
+    "RMSE": 290.51169834449007,
+    "R2": 0.9395401477813721,
+    "path": "models/xgb_urgencias_V1.pkl"
+  }
+}
